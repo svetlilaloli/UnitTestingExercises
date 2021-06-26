@@ -188,3 +188,8 @@ C:\Users\Sony Vaio\Desktop\C#\OOP\UnitTestingExercises\DatabaseExtended.Tests\ob
 C:\Users\Sony Vaio\Desktop\C#\OOP\UnitTestingExercises\DatabaseExtended.Tests\obj\Debug\netcoreapp3.1\DatabaseExtended.Tests.dll
 C:\Users\Sony Vaio\Desktop\C#\OOP\UnitTestingExercises\DatabaseExtended.Tests\obj\Debug\netcoreapp3.1\DatabaseExtended.Tests.pdb
 C:\Users\Sony Vaio\Desktop\C#\OOP\UnitTestingExercises\DatabaseExtended.Tests\obj\Debug\netcoreapp3.1\DatabaseExtended.Tests.genruntimeconfig.cache
+C:\Users\Sony Vaio\Desktop\C#\OOP\UnitTestingExercises\DatabaseExtended.Tests\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\Sony Vaio\Desktop\C#\OOP\UnitTestingExercises\DatabaseExtended.Tests\bin\Debug\netcoreapp3.1\Moq.dll
+C:\Users\Sony Vaio\Desktop\C#\OOP\UnitTestingExercises\DatabaseExtended.Tests\bin\Debug\netcoreapp3.1\DatabaseExtended.dll
+C:\Users\Sony Vaio\Desktop\C#\OOP\UnitTestingExercises\DatabaseExtended.Tests\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Sony Vaio\Desktop\C#\OOP\UnitTestingExercises\DatabaseExtended.Tests\bin\Debug\netcoreapp3.1\DatabaseExtended.pdb

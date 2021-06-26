@@ -40,15 +40,16 @@ namespace Tests
             var ex = Assert.Throws<InvalidOperationException>(() => db.Add(17));
             StringAssert.Contains("Array's capacity must be exactly 16 integers", ex.Message);
         }
-        // TO REFACTOR
         [Test]
         public void Add_AddElement_ShouldAddElementAtTheNextFreeCell()
         {
             var db = new Database.Database(1);
             db.Add(2);
-            var actual = db.Fetch();
+            var wrappedDatabase = new Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject(db);
+            int[] dbData = (int[])wrappedDatabase.GetField("data");
+            var actual = dbData[1];
 
-            Assert.AreEqual(2, actual[^1]);
+            Assert.AreEqual(2, actual);
         }
         [Test]
         public void Add_AddElement_ShouldAddElementToTheDatabase()

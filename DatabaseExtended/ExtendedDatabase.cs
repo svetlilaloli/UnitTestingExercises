@@ -5,14 +5,14 @@ namespace ExtendedDatabase
 {
     public class ExtendedDatabase
     {
-        private Person[] persons;
+        private Person[] people;
 
         private int count;
 
-        public ExtendedDatabase(params Person[] persons)
+        public ExtendedDatabase(params Person[] people)
         {
-            this.persons = new Person[16];
-            AddRange(persons);
+            this.people = new Person[16];
+            AddRange(people);
         }
 
         public int Count
@@ -37,22 +37,26 @@ namespace ExtendedDatabase
 
         public void Add(Person person)
         {
+            if (person == null)
+            {
+                throw new ArgumentNullException("Person cannot be null");
+            }
             if (this.count == 16)
             {
                 throw new InvalidOperationException("Array's capacity must be exactly 16 integers!");
             }
 
-            if (persons.Any(p => p?.UserName == person.UserName))
+            if (people.Any(p => p?.UserName == person.UserName))
             {
                 throw new InvalidOperationException("There is already user with this username!");
             }
 
-            if (persons.Any(p => p?.Id == person.Id))
+            if (people.Any(p => p?.Id == person.Id))
             {
                 throw new InvalidOperationException("There is already user with this Id!");
             }
 
-            this.persons[this.count] = person;
+            this.people[this.count] = person;
             this.count++;
         }
 
@@ -64,7 +68,7 @@ namespace ExtendedDatabase
             }
 
             this.count--;
-            this.persons[this.count] = null;
+            this.people[this.count] = null;
         }
 
         public Person FindByUsername(string name)
@@ -74,12 +78,12 @@ namespace ExtendedDatabase
                 throw new ArgumentNullException("Username parameter is null!");
             }
 
-            if (this.persons.Any(p => p?.UserName == name) == false)
+            if (this.people.Any(p => p?.UserName == name) == false)
             {
                 throw new InvalidOperationException("No user is present by this username!");
             }
 
-            Person person = this.persons.First(p => p.UserName == name);
+            Person person = this.people.First(p => p.UserName == name);
             return person;
         }
 
@@ -91,12 +95,12 @@ namespace ExtendedDatabase
                 throw new ArgumentOutOfRangeException("Id should be a positive number!");
             }
 
-            if (this.persons.Any(p => p?.Id == id) == false)
+            if (this.people.Any(p => p?.Id == id) == false)
             {
                 throw new InvalidOperationException("No user is present by this ID!");
             }
 
-            Person person = this.persons.First(p => p.Id == id);
+            Person person = this.people.First(p => p.Id == id);
             return person;
         }
     }
