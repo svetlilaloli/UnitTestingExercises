@@ -1,7 +1,4 @@
 ﻿using ExtendedDatabase;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DatabaseExtended.Tests
 {
